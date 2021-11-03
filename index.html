@@ -19,9 +19,9 @@
       <div class="form-group">
         <label for="movie">Select a movie</label>
         <select name="movie" id="movie" class="form-control">
-          <option value="first">Scary Movie</option>
-          <option value="second">Comedy Movie</option>
-          <option value="third">Romantic Movie</option>
+          <option value="Scary Movie">Scary Movie</option>
+          <option value="Comedy Movie">Comedy Movie</option>
+          <option value="Romantic Movie">Romantic Movie</option>
         </select>
       </div>
       <div class="form-group">
@@ -31,18 +31,18 @@
       <div class="form-group">
         <label for="time">Select a time</label>
         <select name="time" id="time" class="form-control">
-          <option value="twelve">12:00 p.m.</option>
-          <option value="eight">8:00 p.m.</option>
-          <option value="ten">10:00 p.m.</option>
+          <option value="12pm">12:00 p.m.</option>
+          <option value="8pm">8:00 p.m.</option>
+          <option value="10pm">10:00 p.m.</option>
         </select>
       </div>
       <button type="submit">Enter</button>
     </form>
     <div id="ticket-cost">
       <h3>Here is your ticket information. Enjoy the show!</h3>
-      <p>Movie:<span class="movie-name"></span></p>
-      <p>Time:<span class="time-of-day"></span></p>
-      <p>Cost:<span class="final-cost"></span></p>
+      <p>Movie: <span id="movie-name"> </span></p>
+      <p>Time: <span id="time-of-day"> </span></p>
+      <p>Cost: <span id="final-cost"> </span></p>
     </div>
   </div>
 </body>

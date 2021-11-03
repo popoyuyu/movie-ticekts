@@ -10,17 +10,15 @@ Ticket.prototype.ticketPrice = function () {
   if (this.movie === "Scary Movie") {
     this.cost += 2;
   }
-  if (this.time === "12:00 p.m.") {
+  if (this.time === "12pm") {
     this.cost -= 2;
   }
-  if (this.age >= "65" || this.age <= "10") {
+  if (this.age >= 65 || this.age <= 10) {
     this.cost -= 2;
   }
 };
 
 //UI Logic
-
-
 
 $(document).ready(function () {
   $("#ticket").submit(function (e) {
@@ -28,8 +26,11 @@ $(document).ready(function () {
     const inputtedMovieName = $("select#movie").val();
     const inputtedAge = $("input#age").val();
     const inputtedTime = $("select#time").val();
-    let ticket = new Ticket(inputtedMovieName, inputtedTime, inputtedTime, 10.00);
+    const moviePrice = 10;
+    let ticket = new Ticket(inputtedMovieName, inputtedTime, inputtedAge, moviePrice);
     ticket.ticketPrice();
-    alert(this.cost);
+    $("#movie-name").html(ticket.movie);
+    $("#time-of-day").html(ticket.time);
+    $("#final-cost").html(ticket.cost);
   });
 });
