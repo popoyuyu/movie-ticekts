@@ -1,5 +1,8 @@
-export function Ticket(movie, time, age, cost) {
-
+export default function Ticket(movie, time, age, cost) {
+  this.movie = movie;
+  this.time = time;
+  this.age = age;
+  this.cost = cost;
 }
 
 Ticket.prototype.ticketPrice = function () {
