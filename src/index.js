@@ -1,24 +1,9 @@
-// Business Logic
-function Ticket(movie, time, age, cost) {
-  this.movie = movie;
-  this.time = time;
-  this.age = age;
-  this.cost = cost;
-}
-
-Ticket.prototype.ticketPrice = function () {
-  if (this.movie === "Scary Movie") {
-    this.cost += 2;
-  }
-  if (this.time === "12pm") {
-    this.cost -= 2;
-  }
-  if (this.age >= 65 || this.age <= 10) {
-    this.cost -= 2;
-  }
-};
-
-//UI Logic
+import { Ticket } from './ticket.js';
+import './css/styles.css'
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
 
 $(document).ready(function () {
   $("#ticket").submit(function (e) {
