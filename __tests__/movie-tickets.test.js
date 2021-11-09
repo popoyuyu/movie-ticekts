@@ -1,5 +1,3 @@
-import { ExpectationFailed } from 'http-errors';
-import { test } from 'media-typer';
 import Ticket from './../src/ticket.js';
 
 describe('Ticket', () => {
@@ -10,4 +8,4 @@ describe('Ticket', () => {
     expect(ticket.time).toEqual("time");
     expect(ticket.age).toEqual("age");
   });
-})
+});
