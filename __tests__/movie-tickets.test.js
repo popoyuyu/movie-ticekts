@@ -12,4 +12,14 @@ describe('Ticket', () => {
     const firstMovie = new Ticket("Scary Movie");
     expect(firstMovie.movie).toEqual("Scary Movie");
   });
+
+  test('should display the time 12pm', () => {
+    const time = new Ticket("", "12pm");
+    expect(time.time).toEqual("12pm");
+  });
+
+  test('should display the ', () => {
+    const newTicket = new Ticket("Scary Movie", "11pm", "20");
+    expect(newTicket.ticketPrice()).toEqual(12);
+  });
 });
